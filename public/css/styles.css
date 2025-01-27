@@ -760,6 +760,9 @@ body {
     width: 271px;
     margin: 10px;
 }
+.product-item__img{
+    width: 100%;
+}
 
 .rating {
     display: inline-flex;

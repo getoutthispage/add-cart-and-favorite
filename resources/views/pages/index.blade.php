@@ -144,9 +144,9 @@
                                 <button class="product-item-favorite"></button>
                                 <button class="product-item-cart"> <img src="{{asset('/images/icons/cart-white.svg')}}"
                                         alt="" class="product-item-cart__img"> </button>
-                                <a href="{{ route('product.show', ['id' => $product->id]) }}" class="product-item__notify-link"><span>сообщить о
+                                <a class="product-item__notify-link" href="{{ route('product.show', $product->id) }}">{{ $product->name }} ><span>сообщить о
                                         поступлении</span></a>
-                                <a href="{{ route('product.show', ['id' => $product->id]) }}" class="product-item">
+                                <a class="product-item" href="{{ route('product.show', $product->id) }}">
                                     <p class="product-item__hover-text">
                                         посмотреть товар
                                     </p>

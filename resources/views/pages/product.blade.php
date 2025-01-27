@@ -72,14 +72,11 @@
                                 <a href="#" class="product-card__more">Показать еще</a>
                                 <div class="product-card__btn">
                                     <button id="openModal" class="btn btn-primary">Купить</button>
-                                    {{--                                    <a href="{{route('orders')}}" class="btn btn-primary">заказы</a>--}}
-
-                                    <!-- Всплывающее окно -->
                                     <div id="buyModal" class="modal">
                                         <div class="modal-content">
                                             <span class="close">&times;</span>
                                             <h2>Оставьте ваш номер телефона</h2>
-                                            <form id="buyForm" action="{{ route('submitOrder') }}" method="POST">
+                                            <form id="buyForm" action="{{ route('order.submit') }}" method="POST">
                                                 @csrf
                                                 <input type="hidden" name="product_id" value="{{ $product->id ?? '' }}">
                                                 <label for="name">Ваше имя:</label>
