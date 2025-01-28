@@ -33,7 +33,7 @@
                             $imagesArray = explode(',', $product->images);
                             $imageSrc = !empty($imagesArray[0]) ? trim($imagesArray[0]) : '';
                         @endphp
-                        <div class="product-item__wrapper">
+                        <div class="product-item__wrapper {{ $product->quantity == 0 ? 'product-item__not-available' : '' }}">
                             <button class="product-item-favorite"></button>
                             <button class="product-item-cart">
                                 <img src="/images/icons/cart-white.svg" alt="" class="product-item-cart__img">
@@ -60,21 +60,16 @@
             </div>
             <div class="pagination">
                 <ul class="pagination-list">
-                    {{-- Предыдущая страница --}}
                     @if ($products->onFirstPage())
                         <li class="pagination-list__item disabled"><span>«</span></li>
                     @else
                         <li class="pagination-list__item"><a href="{{ $products->previousPageUrl() }}">«</a></li>
                     @endif
-
-                    {{-- Номера страниц --}}
                     @foreach ($products->getUrlRange(1, $products->lastPage()) as $page => $url)
                         <li class="pagination-list__item {{ $page == $products->currentPage() ? 'active' : '' }}">
                             <a href="{{ $url }}">{{ $page }}</a>
                         </li>
                     @endforeach
-
-                    {{-- Следующая страница --}}
                     @if ($products->hasMorePages())
                         <li class="pagination-list__item"><a href="{{ $products->nextPageUrl() }}">»</a></li>
                     @else

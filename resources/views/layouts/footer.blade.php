@@ -1,4 +1,4 @@
-<footer class="footer">
+<footer class="footer" id="footer">
     <div class="container">
         <div class="footer__top">
             <div class="footer__top-inner">
@@ -32,12 +32,12 @@
                 </div>
                 <div class="footer__top-item footer__top-item-social">
                     <ul class="social-list">
-                        <li class="social-list__item"><a href="{{route('home')}}"><img src="{{asset('images/footer/insta-icon.svg')}}"
+                        <li class="social-list__item"><a href="https://www.instagram.com/indigoshop.kz"><img src="{{asset('images/footer/insta-icon.svg')}}"
                                                                        alt=""></a>
                         </li>
-                        <li class="social-list__item"><a href="{{route('home')}}"><img src="{{asset('images/footer/yt-icon.svg')}}" alt=""></a>
+                        <li class="social-list__item"><a href="https://www.youtube.com/@indigobeauty4298"><img src="{{asset('images/footer/yt-icon.svg')}}" alt=""></a>
                         </li>
-                        <li class="social-list__item"><a href="{{route('home')}}"><img src="{{asset('images/footer/fb-icon.svg')}}" alt=""></a>
+                        <li class="social-list__item"><a href="https://web.facebook.com/people/indigoshopkz/100085899945476"><img src="{{asset('images/footer/fb-icon.svg')}}" alt=""></a>
                         </li>
                     </ul>
                 </div>

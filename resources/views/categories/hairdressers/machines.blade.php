@@ -7,56 +7,48 @@
         <div class="container">
             <ul class="breadcrumbs__list">
                 <li class="breadcrumbs__list-item"><a href="#">Главная</a></li>
-                <li class="breadcrumbs__list-item"><span>Все для колористов</span></li>
+                <li class="breadcrumbs__list-item"><span>Все для парикмахеров</span></li>
+                <li class="breadcrumbs__list-item"><span>Машинки</span></li>
             </ul>
         </div>
     </div>
     <section class="categories page-section">
         <div class="container">
             <div class="categories__inner">
-                <a class="categories__item" href="{{ route('catalog','accessories') }}">
+                <a class="categories__item" href="{{ route('catalog', ['slug' => 'attachments']) }}">
                     <div class="categories__item-info">
-                        <h4 class="categories__item-title">Аксессуары</h4>
+                        <h4 class="categories__item-title">Насадки</h4>
                         <p class="categories__item-text">Подробнее</p>
                     </div>
                     <div class="categories__item-img">
-                        <img src="{{asset('images/categories/key.png')}}" alt="">
+                        <img src="{{asset('images/categories/attachments.png')}}" alt="">
                     </div>
                 </a>
-                <a class="categories__item" href="{{ route('catalog','brushes') }}">
+                <a class="categories__item" href="{{ route('catalog', ['slug' => 'Рабочие Машинки']) }}">
                     <div class="categories__item-info">
-                        <h4 class="categories__item-title">Кисти</h4>
+                        <h4 class="categories__item-title">Рабочие Машинки</h4>
                         <p class="categories__item-text">Подробнее</p>
                     </div>
                     <div class="categories__item-img">
-                        <img src="{{asset('images/categories/brushes.png')}}" alt="">
+                        <img src="{{asset('images/categories/machines.png')}}" alt="">
                     </div>
                 </a>
-                <a class="categories__item" href="{{ route('catalog','tablets') }}">
+                <a class="categories__item" href="{{ route('catalog', ['slug' => 'trimmers']) }}">
                     <div class="categories__item-info">
-                        <h4 class="categories__item-title">Планшеты, термобумага, весы</h4>
+                        <h4 class="categories__item-title">Триммеры</h4>
                         <p class="categories__item-text">Подробнее</p>
                     </div>
                     <div class="categories__item-img">
-                        <img src="{{asset('images/categories/tablets.png')}}" alt="">
+                        <img src="{{asset('images/categories/trimmers.png')}}" alt="">
                     </div>
                 </a>
-                <a class="categories__item" href="{{ route('catalog','cups') }}">
+                <a class="categories__item" href="{{ route('catalog', ['slug' => 'shavers']) }}">
                     <div class="categories__item-info">
-                        <h4 class="categories__item-title">Чашки</h4>
+                        <h4 class="categories__item-title">Шейверы, Электро-Бритвы</h4>
                         <p class="categories__item-text">Подробнее</p>
                     </div>
                     <div class="categories__item-img">
-                        <img src="{{asset('images/categories/cups.png')}}" alt="">
-                    </div>
-                </a>
-                <a class="categories__item" href="{{ route('catalog','cups') }}">
-                    <div class="categories__item-info">
-                        <h4 class="categories__item-title">Шапочки Пелерины</h4>
-                        <p class="categories__item-text">Подробнее</p>
-                    </div>
-                    <div class="categories__item-img">
-                        <img src="{{asset('images/categories/capes.png')}}" alt="">
+                        <img src="{{asset('images/categories/shavers.png')}}" alt="">
                     </div>
                 </a>
             </div>

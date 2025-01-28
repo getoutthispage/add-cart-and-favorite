@@ -12,6 +12,20 @@ class ProductController extends Controller
         $products = Product::paginate(12); // Получить товары с пагинацией
         return view('products.index', compact('products')); // Передать данные в представление
     }
+    public function search(Request $request)
+    {
+        $query = $request->input('query');
+
+        // Выполните поиск по названию товара
+        $products = Product::whereRaw('LOWER(name) LIKE LOWER(?)', ['%' . $query . '%'])
+            ->orderByRaw('quantity > 0 DESC')
+            ->paginate(12);
+
+
+
+        // Верните результаты в представление
+        return view('search.results', compact('products', 'query'));
+    }
 
     public function show($id)
     {

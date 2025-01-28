@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>indigoshop</title>
+    <link rel="icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
     <link rel="stylesheet" href="{{asset('css/styles.css')}}">
     <link rel="stylesheet" href="{{asset('css/media.css')}}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
@@ -26,12 +27,12 @@
                             </a>
                         </li>
                         <li class="menu__item">
-                            <a class="menu__link" href="{{route('home')}}">
+                            <a class="menu__link" href="#categories">
                                 Категории
                             </a>
                         </li>
                         <li class="menu__item">
-                            <a class="menu__link" href="{{route('home')}}">
+                            <a class="menu__link" href="#footer">
                                 Контакты
                             </a>
                         </li>
@@ -42,9 +43,9 @@
                 </a>
 
                 <div class="header__box">
-                    <p class="header__address">
+                    <a href="https://go.2gis.com/OSkNz" class="header__address">
                         Алматы, Гагарина 186/1
-                    </p>
+                    </a>
                     <ul class="user-list">
                         <li class="user-list__item">
                             <a class="user-list__link" href="{{route('home')}}">
@@ -112,12 +113,12 @@
         </li>
 
         <li class="menu-mobile__item">
-            <a class="menu-mobile__link" href="#">
+            <a class="menu-mobile__link" href="{{ url('/categories/hairdressers/machines')}}">
                 <p>Машинки</p>
             </a>
         </li>
         <li class="menu-mobile__item">
-            <a class="menu-mobile__link" href="#">
+            <a class="menu-mobile__link" href="{{ url('/categories/hairdressers/scissors')}}">
                 <p>Ножницы</p>
             </a>
         </li>
@@ -127,17 +128,17 @@
             </a>
         </li>
         <li class="menu-mobile__item">
-            <a class="menu-mobile__link" href="#">
+            <a class="menu-mobile__link" href="{{url('/categories/hairdressers/CurlingIronsStraighteners')}}">
                 <p>Плойки</p>
             </a>
         </li>
         <li class="menu-mobile__item">
-            <a class="menu-mobile__link" href="#">
+            <a class="menu-mobile__link" href="{{ route('catalog','tablets') }}">
                 <p>Планшеты</p>
             </a>
         </li>
         <li class="menu-mobile__item">
-            <a class="menu-mobile__link" href="#">
+            <a class="menu-mobile__link" href="{{ route('catalog','brushes') }}">
                 <p>Кисти</p>
             </a>
         </li>
@@ -147,7 +148,7 @@
             </a>
         </li>
         <li class="menu-mobile__item">
-            <a class="menu-mobile__link" href="#">
+            <a class="menu-mobile__link" href="{{ route('catalog','clips') }}">
                 <p>Зажимы</p>
             </a>
         </li>
@@ -156,22 +157,22 @@
         <div class="container">
             <ul class="menu-categories">
                 <li class="menu-categories__item">
-                    <a class="menu-categories__link" href="{{route('home')}}">Машинки</a>
+                    <a class="menu-categories__link" href="{{ url('/categories/hairdressers/machines')}}">Машинки</a>
                 </li>
                 <li class="menu-categories__item">
-                    <a class="menu-categories__link" href="{{route('home')}}">Ножницы</a>
+                    <a class="menu-categories__link" href="{{ url('/categories/hairdressers/scissors')}}">Ножницы</a>
                 </li>
                 <li class="menu-categories__item">
-                    <a class="menu-categories__link" href="{{route('home')}}">Плойки</a>
+                    <a class="menu-categories__link" href="{{url('/categories/hairdressers/CurlingIronsStraighteners')}}">Плойки</a>
                 </li>
                 <li class="menu-categories__item">
-                    <a class="menu-categories__link" href="{{route('home')}}">Расчески</a>
+                    <a class="menu-categories__link" href="{{url('/categories/hairdressers/combs')}}">Расчески</a>
                 </li>
                 <li class="menu-categories__item">
                     <a class="menu-categories__link" href="{{route('home')}}">Фены</a>
                 </li>
                 <li class="menu-categories__item">
-                    <a class="menu-categories__link" href="{{route('home')}}">Аксессуары</a>
+                    <a class="menu-categories__link" href="{{ url('/categories/accessories') }}">Аксессуары</a>
                 </li>
                 <li class="menu-categories__item">
                     <a class="menu-categories__link" href="{{route('home')}}">Планшеты</a>

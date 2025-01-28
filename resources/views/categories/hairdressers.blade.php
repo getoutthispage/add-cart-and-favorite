@@ -14,7 +14,7 @@
 <section class="categories page-section">
     <div class="container">
         <div class="categories__inner">
-            <a class="categories__item" href="{{ route('curlers') }}">
+            <a class="categories__item" href="#">
                 <div class="categories__item-info">
                     <h4 class="categories__item-title">Бигуди</h4>
                     <p class="categories__item-text">Подробнее</p>
@@ -23,7 +23,7 @@
                     <img src="{{asset('images/categories/curlers.png')}}" alt="">
                 </div>
             </a>
-            <a class="categories__item" href="{{route('categories.hairdressers.machines')}}">
+            <a class="categories__item" href="{{ url('/categories/hairdressers/machines')}}">
                 <div class="categories__item-info">
                     <h4 class="categories__item-title">Машинки</h4>
                     <p class="categories__item-text">Подробнее</p>
@@ -32,7 +32,7 @@
                     <img src="{{asset('images/categories/machines.png')}}" alt="">
                 </div>
             </a>
-            <a class="categories__item" href="{{route('categories.hairdressers.scissors')}}">
+            <a class="categories__item" href="{{ url('/categories/hairdressers/scissors')}}">
                 <div class="categories__item-info">
                     <h4 class="categories__item-title">Ножницы</h4>
                     <p class="categories__item-text">Подробнее</p>
@@ -41,7 +41,8 @@
                     <img src="{{asset('images/categories/scissors.png')}}" alt="">
                 </div>
             </a>
-            <a class="categories__item" href="{{ route('catalog', ['slug' => 'Nightgown']) }}">
+{{--            <a class="categories__item" href=" {{ route('catalog', ['slug' => 'Nightgown']) }}"> --}}
+            <a href="#" class="categories__item">
                 <div class="categories__item-info">
                     <h4 class="categories__item-title">Пеньюары</h4>
                     <p class="categories__item-text">Подробнее</p>
@@ -50,7 +51,7 @@
                     <img src="{{asset('images/categories/Nightgown.png')}}" alt="">
                 </div>
             </a>
-            <a class="categories__item" href="{{route('categories.hairdressers.CurlingIronsStraighteners')}}">
+            <a class="categories__item" href="{{url('/categories/hairdressers/CurlingIronsStraighteners')}}">
                 <div class="categories__item-info">
                     <h4 class="categories__item-title">Плойки Выпрямители</h4>
                     <p class="categories__item-text">Подробнее</p>
@@ -59,7 +60,8 @@
                     <img src="{{asset('images/categories/Curling-Irons-Straighteners.png')}}" alt="">
                 </div>
             </a>
-            <a class="categories__item" href="{{ route('catalog', ['slug' => 'Hair-dryers']) }}">
+            <a href="#" class="categories__item">
+{{--            <a class="categories__item" href="{{ route('catalog', ['slug' => 'Hair-dryers']) }}">--}}
                 <div class="categories__item-info">
                     <h4 class="categories__item-title">Фены</h4>
                     <p class="categories__item-text">Подробнее</p>
@@ -68,7 +70,7 @@
                     <img src="{{asset('images/categories/Hair-dryers.png')}}" alt="">
                 </div>
             </a>
-            <a class="categories__item" href="{{route('categories.hairdressers.combs')}}">
+            <a class="categories__item" href="{{url('/categories/hairdressers/combs')}}">
                 <div class="categories__item-info">
                     <h4 class="categories__item-title">Расчёски</h4>
                     <p class="categories__item-text">Подробнее</p>
@@ -77,7 +79,8 @@
                     <img src="{{asset('images/categories/combs.png')}}" alt="">
                 </div>
             </a>
-            <a class="categories__item" href="{{ route('catalog', ['slug' => 'Sprayers']) }}">
+            <a href="#" class="categories__item">
+{{--            <a class="categories__item" href="{{ route('catalog', ['slug' => 'Sprayers']) }}">--}}
                 <div class="categories__item-info">
                     <h4 class="categories__item-title">Распылители</h4>
                     <p class="categories__item-text">Подробнее</p>
@@ -86,7 +89,8 @@
                     <img src="{{asset('images/categories/Sprayers.png')}}" alt="">
                 </div>
             </a>
-            <a class="categories__item" href="{{ route('catalog', ['slug' => 'brushes']) }}">
+            <a href="#" class="categories__item">
+{{--            <a class="categories__item" href="{{ route('catalog', ['slug' => 'brushes']) }}">--}}
                 <div class="categories__item-info">
                     <h4 class="categories__item-title">Смётки</h4>
                     <p class="categories__item-text">Подробнее</p>
@@ -95,7 +99,8 @@
                     <img src="{{asset('images/categories/brushes.png')}}" alt="">
                 </div>
             </a>
-            <a class="categories__item" href="{{ route('catalog', ['slug' => 'aprons']) }}">
+            <a href="#" class="categories__item">
+{{--            <a class="categories__item" href="{{ route('catalog', ['slug' => 'aprons']) }}">--}}
                 <div class="categories__item-info">
                     <h4 class="categories__item-title">Фартуки</h4>
                     <p class="categories__item-text">Подробнее</p>
@@ -107,138 +112,7 @@
         </div>
     </div>
 </section>
-<section class="products page-section">
-    <div class="container">
-        <div class="products__inner">
-            <h3 class="product__title">Популярные товары</h3>
-            <div class="swiper my-second-slider">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide product-slider__item">
-                        <div class="product-item__wrapper">
-                            <button class="product-item-favorite"></button>
-                            <button class="product-item-cart"> <img src="/images/icons/cart-white.svg"
-                                                                    alt="" class="product-item-cart__img"> </button>
-                            <a href="#" class="product-item__notify-link"><span>сообщить о
-                                    поступлении</span></a>
-                            <a href="#" class="product-item">
-                                <p class="product-item__hover-text">
-                                    посмотреть товар
-                                </p>
-                                <img src="/images/product/cr-11.png" alt="" class="product-item__img">
-                                <h4 class="product-item__title">Рабочая машинка CRONIER CR-11</h4>
-                                <p class="price product-item__price">18 450 <span>₸</span></p>
-                                <p href="" class="product-item__notify-text">
-                                    нет в наличии
-                                </p>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="swiper-slide product-slider__item">
-                        <div class="product-item__wrapper">
-                            <button class="product-item-favorite"></button>
-                            <button class="product-item-cart"> <img src="/images/icons/cart-white.svg"
-                                                                    alt="" class="product-item-cart__img"> </button>
-                            <a href="#" class="product-item__notify-link"><span>сообщить о
-                                    поступлении</span></a>
-                            <a href="#" class="product-item">
-                                <p class="product-item__hover-text">
-                                    посмотреть товар
-                                </p>
-                                <img src="/images/product/cr-11.png" alt="" class="product-item__img">
-                                <h4 class="product-item__title">Рабочая машинка CRONIER CR-11</h4>
-                                <p class="price product-item__price">18 450 <span>₸</span></p>
-                                <p href="" class="product-item__notify-text">
-                                    нет в наличии
-                                </p>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="swiper-slide product-slider__item">
-                        <div class="product-item__wrapper">
-                            <button class="product-item-favorite"></button>
-                            <button class="product-item-cart"> <img src="/images/icons/cart-white.svg"
-                                                                    alt="" class="product-item-cart__img"> </button>
-                            <a href="#" class="product-item__notify-link"><span>сообщить о
-                                    поступлении</span></a>
-                            <a href="#" class="product-item">
-                                <p class="product-item__hover-text">
-                                    посмотреть товар
-                                </p>
-                                <img src="/images/product/cr-11.png" alt="" class="product-item__img">
-                                <h4 class="product-item__title">Рабочая машинка CRONIER CR-11</h4>
-                                <p class="price product-item__price">18 450 <span>₸</span></p>
-                                <p href="" class="product-item__notify-text">
-                                    нет в наличии
-                                </p>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="swiper-slide product-slider__item">
-                        <div class="product-item__wrapper">
-                            <button class="product-item-favorite"></button>
-                            <button class="product-item-cart"> <img src="/images/icons/cart-white.svg"
-                                                                    alt="" class="product-item-cart__img"> </button>
-                            <a href="#" class="product-item__notify-link"><span>сообщить о
-                                    поступлении</span></a>
-                            <a href="#" class="product-item">
-                                <p class="product-item__hover-text">
-                                    посмотреть товар
-                                </p>
-                                <img src="/images/product/cr-11.png" alt="" class="product-item__img">
-                                <h4 class="product-item__title">Рабочая машинка CRONIER CR-11</h4>
-                                <p class="price product-item__price">18 450 <span>₸</span></p>
-                                <p href="" class="product-item__notify-text">
-                                    нет в наличии
-                                </p>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="swiper-slide product-slider__item">
-                        <div class="product-item__wrapper">
-                            <button class="product-item-favorite"></button>
-                            <button class="product-item-cart"> <img src="/images/icons/cart-white.svg"
-                                                                    alt="" class="product-item-cart__img"> </button>
-                            <a href="#" class="product-item__notify-link"><span>сообщить о
-                                    поступлении</span></a>
-                            <a href="#" class="product-item">
-                                <p class="product-item__hover-text">
-                                    посмотреть товар
-                                </p>
-                                <img src="/images/product/cr-11.png" alt="" class="product-item__img">
-                                <h4 class="product-item__title">Рабочая машинка CRONIER CR-11</h4>
-                                <p class="price product-item__price">18 450 <span>₸</span></p>
-                                <p href="" class="product-item__notify-text">
-                                    нет в наличии
-                                </p>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="swiper-slide product-slider__item">
-                        <div class="product-item__wrapper">
-                            <button class="product-item-favorite"></button>
-                            <button class="product-item-cart"> <img src="/images/icons/cart-white.svg"
-                                                                    alt="" class="product-item-cart__img"> </button>
-                            <a href="#" class="product-item__notify-link"><span>сообщить о
-                                    поступлении</span></a>
-                            <a href="#" class="product-item">
-                                <p class="product-item__hover-text">
-                                    посмотреть товар
-                                </p>
-                                <img src="/images/product/cr-11.png" alt="" class="product-item__img">
-                                <h4 class="product-item__title">Рабочая машинка CRONIER CR-11</h4>
-                                <p class="price product-item__price">18 450 <span>₸</span></p>
-                                <p href="" class="product-item__notify-text">
-                                    нет в наличии
-                                </p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="product__more"><a class="product__more-link" href="#">Показать еще</a></div>
-        </div>
-    </div>
-</section>
+@include('section.popularProducts', ['pptitle' => 'Популярные товары:'])
 <div class="banner page-section">
     <div class="container">
         <a class="banner-link" href="#">

@@ -10,7 +10,6 @@
                     <div class="product-card-img-wrapper">
                         <img src="/product/{{ $product->image }}" alt="" class="product-card-img">
                     </div>
-                    {{--                <p class="product-card__price-old price">18 450</p>--}}
                     <p class="product-card__price-new">{{ number_format($product->sale_price, 2, '.', ' ') }}</p>
                     <a href="#" class="product-card__link">Гарантия качества</a>
                 </div>
@@ -76,7 +75,7 @@
                                         <div class="modal-content">
                                             <span class="close">&times;</span>
                                             <h2>Оставьте ваш номер телефона</h2>
-                                            <form id="buyForm" action="{{ route('order.submit') }}" method="POST">
+                                            <form id="buyForm" action="{{ route('submitOrder') }}" method="POST">
                                                 @csrf
                                                 <input type="hidden" name="product_id" value="{{ $product->id ?? '' }}">
                                                 <label for="name">Ваше имя:</label>
