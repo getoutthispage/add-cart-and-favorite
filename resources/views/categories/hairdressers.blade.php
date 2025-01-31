@@ -14,7 +14,7 @@
 <section class="categories page-section">
     <div class="container">
         <div class="categories__inner">
-            <a class="categories__item" href="#">
+            <a class="categories__item"  href="{{ route('catalog','curlers') }}">
                 <div class="categories__item-info">
                     <h4 class="categories__item-title">Бигуди</h4>
                     <p class="categories__item-text">Подробнее</p>
@@ -41,8 +41,7 @@
                     <img src="{{asset('images/categories/scissors.png')}}" alt="">
                 </div>
             </a>
-{{--            <a class="categories__item" href=" {{ route('catalog', ['slug' => 'Nightgown']) }}"> --}}
-            <a href="#" class="categories__item">
+            <a class="categories__item"  href="{{ route('catalog','Nightgown') }}" >
                 <div class="categories__item-info">
                     <h4 class="categories__item-title">Пеньюары</h4>
                     <p class="categories__item-text">Подробнее</p>
@@ -60,8 +59,7 @@
                     <img src="{{asset('images/categories/Curling-Irons-Straighteners.png')}}" alt="">
                 </div>
             </a>
-            <a href="#" class="categories__item">
-{{--            <a class="categories__item" href="{{ route('catalog', ['slug' => 'Hair-dryers']) }}">--}}
+            <a class="categories__item" href="{{ route('catalog','Hair-dryers') }}" >
                 <div class="categories__item-info">
                     <h4 class="categories__item-title">Фены</h4>
                     <p class="categories__item-text">Подробнее</p>
@@ -79,8 +77,7 @@
                     <img src="{{asset('images/categories/combs.png')}}" alt="">
                 </div>
             </a>
-            <a href="#" class="categories__item">
-{{--            <a class="categories__item" href="{{ route('catalog', ['slug' => 'Sprayers']) }}">--}}
+            <a class="categories__item" href="{{  route('catalog','Sprayers') }}">
                 <div class="categories__item-info">
                     <h4 class="categories__item-title">Распылители</h4>
                     <p class="categories__item-text">Подробнее</p>
@@ -89,8 +86,7 @@
                     <img src="{{asset('images/categories/Sprayers.png')}}" alt="">
                 </div>
             </a>
-            <a href="#" class="categories__item">
-{{--            <a class="categories__item" href="{{ route('catalog', ['slug' => 'brushes']) }}">--}}
+            <a class="categories__item"  href="{{  route('catalog','brusheshair') }}">
                 <div class="categories__item-info">
                     <h4 class="categories__item-title">Смётки</h4>
                     <p class="categories__item-text">Подробнее</p>
@@ -99,8 +95,7 @@
                     <img src="{{asset('images/categories/brushes.png')}}" alt="">
                 </div>
             </a>
-            <a href="#" class="categories__item">
-{{--            <a class="categories__item" href="{{ route('catalog', ['slug' => 'aprons']) }}">--}}
+            <a class="categories__item" href="{{ route('catalog','aprons') }}">
                 <div class="categories__item-info">
                     <h4 class="categories__item-title">Фартуки</h4>
                     <p class="categories__item-text">Подробнее</p>

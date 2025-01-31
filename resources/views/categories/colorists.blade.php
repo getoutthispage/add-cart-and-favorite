@@ -50,7 +50,7 @@
                         <img src="{{asset('images/categories/cups.png')}}" alt="">
                     </div>
                 </a>
-                <a class="categories__item" href="{{ route('catalog','cups') }}">
+                <a class="categories__item" href="{{ route('catalog','caps') }}">
                     <div class="categories__item-info">
                         <h4 class="categories__item-title">Шапочки Пелерины</h4>
                         <p class="categories__item-text">Подробнее</p>

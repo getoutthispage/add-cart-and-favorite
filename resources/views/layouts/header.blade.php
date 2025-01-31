@@ -52,11 +52,43 @@
                                 <img src="{{asset('/images/icons/favorite.svg')}}" alt="">
                             </a>
                         </li>
+
+
+
+
+
                         <li class="user-list__item">
-                            <a class="user-list__link" href="{{route('home')}}">
-                                <img src="{{asset('/images/header/user.svg')}}" alt="">
+                            <a href="#" class="user-list__link" onclick="toggleModal(event)">
+                                <img src="http://192.168.0.5:8080/images/header/user.svg" alt="Профиль">
                             </a>
                         </li>
+
+                        <!-- Модальное окно -->
+                        <div id="authModal" class="modal" style="display: none;"> <!-- Скрыто по умолчанию -->
+                            <div class="modal-content">
+                                <!-- Кнопка закрытия -->
+                                <span class="close" onclick="toggleModal()">&times;</span>
+
+
+                                @auth
+                                    <p>Добро пожаловать!</p>
+                                    <a class="modal-links">
+                                    <a href="{{route('dashboard')}}" class="modal-button">Профиль</a>
+                                </a>
+                                @else
+                                    <p>Авторизация/Регистрация</p>
+                                <a class="modal-links">
+                                    <a href="{{route('login')}}" class="modal-button">Войти</a>
+                                </a>
+                                <a class="modal-links">
+                                    <a href="{{route('register')}}" class="modal-button">Регистрация</a>
+                                </a>
+                                @endauth
+                            </div>
+                        </div>
+
+
+
                         <li class="user-list__item">
                             <a class="user-list__link cart" href="{{route('home')}}">
                                 <img src="{{asset('/images/icons/cart.svg')}}" alt="">

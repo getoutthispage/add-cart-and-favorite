@@ -12,16 +12,31 @@ class ProductController extends Controller
         $products = Product::paginate(12); // Получить товары с пагинацией
         return view('products.index', compact('products')); // Передать данные в представление
     }
+//    public function search(Request $request)
+//    {
+//        $query = $request->input('query');
+//
+//        // Выполните поиск по названию товара
+//        $products = Product::whereRaw('LOWER(name) LIKE LOWER(?)', ['%' . $query . '%'])
+//            ->orderByRaw('quantity > 0 DESC')
+//            ->paginate(12)
+//            ->appends(['query' => $query]);
+//
+//        // Верните результаты в представление
+//        return view('search.results', compact('products', 'query'));
+//    }
     public function search(Request $request)
     {
         $query = $request->input('query');
 
-        // Выполните поиск по названию товара
-        $products = Product::whereRaw('LOWER(name) LIKE LOWER(?)', ['%' . $query . '%'])
+        // Выполните поиск по названию товара и по бренду
+        $products = Product::where(function ($queryBuilder) use ($query) {
+            $queryBuilder->whereRaw('LOWER(name) LIKE LOWER(?)', ['%' . $query . '%'])
+                ->orWhereRaw("LOWER(attributes->>'Брeнд') LIKE LOWER(?)", ['%' . $query . '%']); // Поиск по бренду
+        })
             ->orderByRaw('quantity > 0 DESC')
-            ->paginate(12);
-
-
+            ->paginate(12)
+            ->appends(['query' => $query]);
 
         // Верните результаты в представление
         return view('search.results', compact('products', 'query'));

@@ -45,7 +45,7 @@
         </div>
         <div class="footer__bottom">
             <a class="footer__bottom-link" href="tel:+77089739330">8 708 973 93 30</a>
-            <a class="footer__bottom-link" href="{{route('home')}}">Алматы, Гагарина 186/1</a>
+            <a class="footer__bottom-link" href="https://go.2gis.com/OSkNz">Алматы, Гагарина 186/1</a>
         </div>
     </div>
 </footer>

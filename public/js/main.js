@@ -24,7 +24,7 @@ const secondSlider = new Swiper('.my-second-slider', {
             slidesPerView: 2, // Для экранов шириной до 968px
         },
         0: {
-            slidesPerView: 1, // Для экранов шириной до 640px
+            slidesPerView: 2, // Для экранов шириной до 640px
         },
 
     },
@@ -46,3 +46,16 @@ window.onclick = function (event) {
 $('.menu-btn').on('click', function (){
    $('.menu-mobile__list').toggleClass('menu-mobile__list--active')
 });
+function toggleModal(event) {
+    if (event) event.preventDefault(); // Отключаем переход по ссылке
+    let modal = document.getElementById('authModal');
+    modal.style.display = (modal.style.display === "flex") ? "none" : "flex";
+}
+
+// Закрытие при клике вне окна
+window.onclick = function(event) {
+    let modal = document.getElementById('authModal');
+    if (event.target === modal) {
+        modal.style.display = "none";
+    }
+};

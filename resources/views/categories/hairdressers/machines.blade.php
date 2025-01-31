@@ -15,7 +15,7 @@
     <section class="categories page-section">
         <div class="container">
             <div class="categories__inner">
-                <a class="categories__item" href="{{ route('catalog', ['slug' => 'attachments']) }}">
+                <a class="categories__item" href="{{ route('catalog', 'attachments') }}">
                     <div class="categories__item-info">
                         <h4 class="categories__item-title">Насадки</h4>
                         <p class="categories__item-text">Подробнее</p>
@@ -24,7 +24,7 @@
                         <img src="{{asset('images/categories/attachments.png')}}" alt="">
                     </div>
                 </a>
-                <a class="categories__item" href="{{ route('catalog', ['slug' => 'Рабочие Машинки']) }}">
+                <a class="categories__item" href="{{ route('catalog','working-machines') }}">
                     <div class="categories__item-info">
                         <h4 class="categories__item-title">Рабочие Машинки</h4>
                         <p class="categories__item-text">Подробнее</p>
@@ -33,7 +33,7 @@
                         <img src="{{asset('images/categories/machines.png')}}" alt="">
                     </div>
                 </a>
-                <a class="categories__item" href="{{ route('catalog', ['slug' => 'trimmers']) }}">
+                <a class="categories__item" href="{{ route('catalog', 'trimmers') }}">
                     <div class="categories__item-info">
                         <h4 class="categories__item-title">Триммеры</h4>
                         <p class="categories__item-text">Подробнее</p>
@@ -42,7 +42,7 @@
                         <img src="{{asset('images/categories/trimmers.png')}}" alt="">
                     </div>
                 </a>
-                <a class="categories__item" href="{{ route('catalog', ['slug' => 'shavers']) }}">
+                <a class="categories__item" href="{{ route('catalog', 'shavers') }}">
                     <div class="categories__item-info">
                         <h4 class="categories__item-title">Шейверы, Электро-Бритвы</h4>
                         <p class="categories__item-text">Подробнее</p>

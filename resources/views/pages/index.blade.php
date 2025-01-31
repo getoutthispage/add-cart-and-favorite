@@ -4,28 +4,46 @@
 
 @section('content')
     <section class="banner__swiper page-section">
-
         <div class="container">
             <div class="banner-section-inner">
                 <div class="swiper my-first-slider">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img class="swiper__img"
-                                                       src="{{asset('images/banner/scissors-for-hairdressers-and-barbers.jpg')}}"
-                                                       alt=""></div>
-                        <div class="swiper-slide"><img class="swiper__img"
-                                                       src="{{asset('images/banner/installment-plan-in-kaspi.jpg')}}"
-                                                       alt=""></div>
-                        <div class="swiper-slide"><img class="swiper__img"
-                                                       src="{{asset('images/banner/installment-plan-in-halyk.jpg')}}"
-                                                       alt=""></div>
+                        @foreach ($banners as $banner)
+                            <div class="swiper-slide">
+                                <img class="swiper__img" src="{{ asset('storage/' . $banner->image_path) }}" alt="">
+                            </div>
+                        @endforeach
                     </div>
                 </div>
-                <a class="main-promotion-banner" href="{{route('home')}}">
-                    <img src="{{asset('/images/banner/sale-product/main-promotion.png')}}" alt="">
+                <a class="main-promotion-banner" href="{{ route('home') }}">
+                    <img src="{{ asset('/images/banner/sale-product/main-promotion.png') }}" alt="">
                 </a>
             </div>
         </div>
     </section>
+{{--    <section class="banner__swiper page-section">--}}
+
+{{--        <div class="container">--}}
+{{--            <div class="banner-section-inner">--}}
+{{--                <div class="swiper my-first-slider">--}}
+{{--                    <div class="swiper-wrapper">--}}
+{{--                        <div class="swiper-slide"><img class="swiper__img"--}}
+{{--                                                       src="{{asset('images/banner/scissors-for-hairdressers-and-barbers.jpg')}}"--}}
+{{--                                                       alt=""></div>--}}
+{{--                        <div class="swiper-slide"><img class="swiper__img"--}}
+{{--                                                       src="{{asset('images/banner/installment-plan-in-kaspi.jpg')}}"--}}
+{{--                                                       alt=""></div>--}}
+{{--                        <div class="swiper-slide"><img class="swiper__img"--}}
+{{--                                                       src="{{asset('images/banner/installment-plan-in-halyk.jpg')}}"--}}
+{{--                                                       alt=""></div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <a class="main-promotion-banner" href="{{route('home')}}">--}}
+{{--                    <img src="{{asset('/images/banner/sale-product/main-promotion.png')}}" alt="">--}}
+{{--                </a>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    </section>--}}
     <section class="search page-section">
         <div class="container">
             <form class="search__content-form" action="{{ route('search') }}" method="GET">
