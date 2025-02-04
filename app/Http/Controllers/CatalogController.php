@@ -2,14 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Support\Facades\Log;
 use App\Models\Product;
 use Illuminate\Routing\Controller;
+use Illuminate\View\View;
 
 class CatalogController extends Controller
 {
-    protected $slugToPathname = [
-
+    protected array $slugToPathname = [
         'accessories' => 'INDIGOSHOP/АКСЕССУАРЫ/Аксессуары',
         'brushes' => 'INDIGOSHOP/ВСЕ ДЛЯ КОЛОРИСТОВ/Кисти',
         'cups' => 'INDIGOSHOP/ВСЕ ДЛЯ КОЛОРИСТОВ/Чашки',
@@ -34,7 +33,7 @@ class CatalogController extends Controller
 
     ];
 
-    public function show($slug)
+    public function show($slug): View
     {
         $pathname = $this->slugToPathname[$slug] ?? null;
         $pathSegments = explode('/', $pathname);

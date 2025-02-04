@@ -70,32 +70,7 @@
                                 </ul>
                                 <a href="#" class="product-card__more">Показать еще</a>
                                 <div class="product-card__btn">
-                                    <button id="openModal" class="btn btn-primary">Купить</button>
-                                    <div id="buyModal" class="modal">
-                                        <div class="modal-content">
-                                            <span class="close">&times;</span>
-                                            <h2>Оставьте ваш номер телефона</h2>
-                                            <form id="buyForm" action="{{ route('submitOrder') }}" method="POST">
-                                                @csrf
-                                                <input type="hidden" name="product_id" value="{{ $product->id ?? '' }}">
-                                                <label for="name">Ваше имя:</label>
-                                                <input type="text" id="name" name="name" placeholder="Введите ваше имя"
-                                                       required>
-
-                                                <label for="phone">Номер телефона:</label>
-                                                <input type="tel" id="phone" name="phone"
-                                                       placeholder="Введите номер телефона" required>
-
-                                                <button type="submit" class="btn btn-success">Отправить</button>
-                                            </form>
-                                        </div>
-                                    </div>
-                                    @if(session('success'))
-                                        <div class="alert alert-success">
-                                            {{ session('success') }}
-                                        </div>
-                                    @endif
-
+                                    <button>Купить</button>
                                 </div>
                             </div>
                             <div id="product-2" class="tabs-content product-card__tab-content"></div>

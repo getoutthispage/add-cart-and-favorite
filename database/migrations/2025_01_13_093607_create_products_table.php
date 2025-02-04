@@ -21,6 +21,7 @@ return new class extends Migration
             $table->integer('quantity')->default(0); // количество
             $table->text('images')->nullable(); // изображения
             $table->json('attributes')->nullable();
+            $table->string('meta_href')->nullable(); // Добавляем новое поле meta_href
             $table->timestamps(); // временные метки created_at и updated_at
         });
     }

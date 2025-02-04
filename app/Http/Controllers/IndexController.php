@@ -2,15 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Banner;
 use App\Models\Product;
-use Illuminate\Http\Request;
+use Illuminate\View\View;
 
 class IndexController extends Controller
 {
-    public function index(){
+    public function index(): View
+    {
         $products = Product::all();
-        $banners = Banner::all();
-        return view('pages.index', compact('products', 'banners'));
+        return view('pages.index', compact('products'));
     }
 }
