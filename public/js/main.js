@@ -29,33 +29,3 @@ const secondSlider = new Swiper('.my-second-slider', {
 
     },
 });
-document.getElementById('openModal').onclick = function () {
-    document.getElementById('buyModal').style.display = 'block';
-};
-
-document.querySelector('.close').onclick = function () {
-    document.getElementById('buyModal').style.display = 'none';
-};
-
-window.onclick = function (event) {
-    const modal = document.getElementById('buyModal');
-    if (event.target == modal) {
-        modal.style.display = 'none';
-    }
-};
-$('.menu-btn').on('click', function (){
-   $('.menu-mobile__list').toggleClass('menu-mobile__list--active')
-});
-function toggleModal(event) {
-    if (event) event.preventDefault(); // Отключаем переход по ссылке
-    let modal = document.getElementById('authModal');
-    modal.style.display = (modal.style.display === "flex") ? "none" : "flex";
-}
-
-// Закрытие при клике вне окна
-window.onclick = function(event) {
-    let modal = document.getElementById('authModal');
-    if (event.target === modal) {
-        modal.style.display = "none";
-    }
-};

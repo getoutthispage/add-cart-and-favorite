@@ -17,9 +17,6 @@
         <div class="container">
             <div class="header__top-inner">
                 <nav class="menu">
-                    <div class="menu-btn">
-                        <img src="{{asset('images/header/burger.svg')}}" alt="">
-                    </div>
                     <ul class="menu__list">
                         <li class="menu__item">
                             <a class="menu__link" href="{{route('home')}}">
@@ -48,51 +45,8 @@
                     </a>
                     <ul class="user-list">
                         <li class="user-list__item">
-                            <a class="user-list__link" href="{{route('home')}}">
-                                <img src="{{asset('/images/icons/favorite.svg')}}" alt="">
-                            </a>
-                        </li>
-
-
-
-
-
-                        <li class="user-list__item">
-                            <a href="#" class="user-list__link" onclick="toggleModal(event)">
-                                <img src="http://192.168.0.5:8080/images/header/user.svg" alt="Профиль">
-                            </a>
-                        </li>
-
-                        <!-- Модальное окно -->
-                        <div id="authModal" class="modal" style="display: none;"> <!-- Скрыто по умолчанию -->
-                            <div class="modal-content">
-                                <!-- Кнопка закрытия -->
-                                <span class="close" onclick="toggleModal()">&times;</span>
-
-
-                                @auth
-                                    <p>Добро пожаловать!</p>
-                                    <a class="modal-links">
-                                    <a href="{{route('dashboard')}}" class="modal-button">Профиль</a>
-                                </a>
-                                @else
-                                    <p>Авторизация/Регистрация</p>
-                                <a class="modal-links">
-                                    <a href="{{route('login')}}" class="modal-button">Войти</a>
-                                </a>
-                                <a class="modal-links">
-                                    <a href="{{route('register')}}" class="modal-button">Регистрация</a>
-                                </a>
-                                @endauth
-                            </div>
-                        </div>
-
-
-
-                        <li class="user-list__item">
                             <a class="user-list__link cart" href="{{route('home')}}">
                                 <img src="{{asset('/images/icons/cart.svg')}}" alt="">
-                                <!-- <p class="cart__num">1</p> -->
                             </a>
                         </li>
                     </ul>
@@ -100,91 +54,6 @@
             </div>
         </div>
     </div>
-    <ul class="menu-mobile__list">
-        <li class="menu-mobile__item">
-            <a class="menu-mobile__link" href="#">
-                <img class="menu-mobile__img" src="{{asset('/images/header/user.svg')}}" alt="">
-                <p>Войти</p>
-            </a>
-        </li>
-        <li class="menu-mobile__item">
-            <a class="menu-mobile__link" href="#">
-                <img class="menu-mobile__img" src="{{asset('/images/header/user.svg')}}" alt="">
-                <p>Регистрация</p>
-            </a>
-        </li>
-        <li class="menu-mobile__item">
-            <a class="menu-mobile__link" href="#">
-                <img class="menu-mobile__img" src="{{asset('/images/icons/favorite.svg')}}" alt="">
-                <p>Избранное</p>
-            </a>
-        </li>
-        <li class="menu-mobile__item">
-            <a class="menu-mobile__link" href="#">
-                <img class="menu-mobile__img" src="{{asset('/images/icons/cart.svg')}}" alt="">
-                <p>Корзина</p>
-            </a>
-        </li>
-        <li class="menu-mobile__item">
-            <a class="menu-mobile__link" href="#">
-                <img class="menu-mobile__img" src="{{asset('/images/icons/shops.svg')}}" alt="">
-                <p>Магазины</p>
-            </a>
-        </li>
-        <li class="menu-mobile__item">
-            <a class="menu-mobile__link" href="#">
-                <img class="menu-mobile__img" src="{{asset('/images/icons/procent.svg')}}" alt="">
-                <p>Акции</p>
-            </a>
-        </li>
-        <li class="menu-mobile__item">
-            <a class="menu-mobile__link" href="#">
-                <img class="menu-mobile__img" src="{{asset('/images/icons/dostavka.svg')}}" alt="">
-                <p>Доставка и оплата</p>
-            </a>
-        </li>
-
-        <li class="menu-mobile__item">
-            <a class="menu-mobile__link" href="{{ url('/categories/hairdressers/machines')}}">
-                <p>Машинки</p>
-            </a>
-        </li>
-        <li class="menu-mobile__item">
-            <a class="menu-mobile__link" href="{{ url('/categories/hairdressers/scissors')}}">
-                <p>Ножницы</p>
-            </a>
-        </li>
-        <li class="menu-mobile__item">
-            <a class="menu-mobile__link" href="#">
-                <p>Фены</p>
-            </a>
-        </li>
-        <li class="menu-mobile__item">
-            <a class="menu-mobile__link" href="{{url('/categories/hairdressers/CurlingIronsStraighteners')}}">
-                <p>Плойки</p>
-            </a>
-        </li>
-        <li class="menu-mobile__item">
-            <a class="menu-mobile__link" href="{{ route('catalog','tablets') }}">
-                <p>Планшеты</p>
-            </a>
-        </li>
-        <li class="menu-mobile__item">
-            <a class="menu-mobile__link" href="{{ route('catalog','brushes') }}">
-                <p>Кисти</p>
-            </a>
-        </li>
-        <li class="menu-mobile__item">
-            <a class="menu-mobile__link" href="#">
-                <p>Чашки</p>
-            </a>
-        </li>
-        <li class="menu-mobile__item">
-            <a class="menu-mobile__link" href="{{ route('catalog','clips') }}">
-                <p>Зажимы</p>
-            </a>
-        </li>
-    </ul>
     <div class="header__bottom">
         <div class="container">
             <ul class="menu-categories">
@@ -195,7 +64,8 @@
                     <a class="menu-categories__link" href="{{ url('/categories/hairdressers/scissors')}}">Ножницы</a>
                 </li>
                 <li class="menu-categories__item">
-                    <a class="menu-categories__link" href="{{url('/categories/hairdressers/CurlingIronsStraighteners')}}">Плойки</a>
+                    <a class="menu-categories__link"
+                       href="{{url('/categories/hairdressers/CurlingIronsStraighteners')}}">Плойки</a>
                 </li>
                 <li class="menu-categories__item">
                     <a class="menu-categories__link" href="{{url('/categories/hairdressers/combs')}}">Расчески</a>
